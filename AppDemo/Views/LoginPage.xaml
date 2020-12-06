@@ -8,6 +8,16 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Entry
+                                Placeholder="Correo Electronico"
+                                Text="{Binding Signin.CorreoElectronico, Mode=TwoWay}"                                
+                                ></Entry>
+
+            <Entry
+                                Placeholder="Password"
+                                Text="{Binding Signin.Contrasenia, Mode=TwoWay}">
+            </Entry>
+
             <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
         </StackLayout>
     </ContentPage.Content>

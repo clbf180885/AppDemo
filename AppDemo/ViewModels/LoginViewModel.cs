@@ -10,6 +10,8 @@ namespace AppDemo.ViewModels
     {
         public Command LoginCommand { get; }
 
+        public INavigation Navigation { get; set; }
+
         public LoginViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
@@ -18,7 +20,11 @@ namespace AppDemo.ViewModels
         private async void OnLoginClicked(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+           await Shell.Current.GoToAsync($"{nameof(AboutPage)}");
+            //var navigation = new NavigationPage(new AboutPage());
+
+            //App.Current.MainPage = navigation;
+            //App.Current.
         }
     }
 }
